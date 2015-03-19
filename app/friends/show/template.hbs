@@ -1,0 +1,19 @@
+<div class="friend-profile" class="row">
+  <div class="friend-info">
+    {{fill-murray width=250 height=250}}
+    <div>
+      <p>{{model.fullName}}</p>
+      <p>{{model.email}}</p>
+      <p>{{model.twitter}}</p>
+      <ul class="friend-profile-links">
+        <li>{{link-to "Lend article" "articles.new"}}</li>
+        <li>{{link-to "Edit info" "friends.edit" model}}</li>
+        <li><a href="#" {{action 'delete' model}}>delete</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="articles-container">
+  {{outlet}}
+</div>
